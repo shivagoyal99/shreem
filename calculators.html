@@ -1,0 +1,47 @@
+<!doctype html><html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Financial Calculators | Shreem Financial Group</title><meta name="description" content="Mortgage payment and savings growth calculators."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><div class="utility"><div class="wrap"><a class="btn btn-gold" href="contact.html">Talk to an advisor</a><a class="btn btn-gold" href="free-quote.html">Get a quote</a></div></div>
+<div class="masthead"><div class="wrap"><a class="logo" href="index.html" aria-label="Shreem Financial Group home"><img src="assets/shreem-logo.png" alt="Shreem Financial. Your way to FIRE journey."></a>
+<div class="contact-mini"><b>Shreem Financial Group</b><br>7275 Rapistan Court, Mississauga, ON L5N 5Z4<br>+1 548-328-5999</div></div></div>
+<div class="navbar"><div class="wrap"><button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li class="has-sub"><a href="about.html">About Us</a><ul class="sub"><li><a href="mission.html">Mission, Vision and Values</a></li><li><a href="team.html">Our Team</a></li></ul></li><li class="has-sub"><a href="services.html" aria-current="page">Services</a><ul class="sub"><li><a href="insurance.html">Insurance & Investment</a></li><li><a href="mortgage.html">Mortgage</a></li><li><a href="realtor.html">Real Estate</a></li><li><a href="calculators.html" aria-current="page">Financial Calculators</a></li></ul></li><li><a href="partners.html">Partners</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog.html">Blog</a></li></ul></nav></div></div><main><section class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html">Home</a> / <a href="services.html">Services</a> / Financial calculators</div><h1>Financial calculators</h1><p>Try the numbers before you talk to an advisor.</p></div></section>
+<section class="block"><div class="wrap"><div class="head"><h2>Mortgage payment</h2></div><div class="calc">
+  <form onsubmit="return false" aria-label="Mortgage payment calculator">
+   <label for="price">Home price ($)<input id="price" type="number" min="0" step="5000" value="850000" inputmode="numeric"></label>
+   <div class="row"><label for="down">Down payment (%)<input id="down" type="number" min="5" max="100" step="1" value="20"></label>
+   <label for="rate">Interest rate (%)<input id="rate" type="number" min="0" max="20" step="0.05" value="4.5"></label></div>
+   <label for="amort">Amortization<select id="amort"><option value="15">15 years</option><option value="20">20 years</option><option value="25" selected>25 years</option><option value="30">30 years</option></select></label>
+  </form>
+  <div class="result" aria-live="polite"><span>Estimated monthly payment</span><span class="big" id="pay">$0</span>
+   <dl><div><dt>Mortgage amount</dt><dd id="o-loan"></dd></div><div><dt>Down payment</dt><dd id="o-down"></dd></div><div><dt>Interest over the full term</dt><dd id="o-int"></dd></div></dl>
+   <small>Sample figures for illustration. This is not a rate quote or an approval. Mortgage insurance and property taxes are not included.</small></div></div></div></section>
+<section class="block tint"><div class="wrap"><div class="head"><h2>Savings growth</h2><p class="sub">See how regular saving could add up for retirement, a home or your children's education.</p></div><div class="calc">
+  <form onsubmit="return false" aria-label="Savings growth calculator">
+   <label for="s-start">Starting amount ($)<input id="s-start" type="number" min="0" step="500" value="10000" inputmode="numeric"></label>
+   <label for="s-month">Monthly contribution ($)<input id="s-month" type="number" min="0" step="50" value="500" inputmode="numeric"></label>
+   <div class="row"><label for="s-years">Years<input id="s-years" type="number" min="1" max="60" value="25"></label>
+   <label for="s-rate">Annual return (%)<input id="s-rate" type="number" min="0" max="20" step="0.1" value="5"></label></div>
+  </form>
+  <div class="result" aria-live="polite"><span>Estimated value</span><span class="big" id="s-fv">$0</span>
+   <dl><div><dt>Total you put in</dt><dd id="s-put"></dd></div><div><dt>Growth</dt><dd id="s-gain"></dd></div></dl>
+   <small>Illustration only. Returns are not guaranteed and real investments rise and fall. Fees and taxes are not included.</small></div></div></div></section><section class="band"><div class="wrap"><h2>Ready to talk it through?</h2><p>Call or send a message. We reply to every enquiry.</p><div class="actions"><a class="btn btn-gold" href="contact.html">Talk to an advisor</a><a class="btn btn-lineW" href="free-quote.html">Get a quote</a></div></div></section></main><footer class="site"><div class="wrap">
+<div><h4>Shreem Financial Group</h4><p>7275 Rapistan Court<br>Mississauga, ON L5N 5Z4</p><p style="margin-top:10px">+1 548-328-5999<br>shreemfinancialgroup@gmail.com</p></div>
+<div><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a></div>
+<div><h4>Services</h4><a href="insurance.html">Insurance and investments</a><a href="mortgage.html">Mortgage</a><a href="realtor.html">Real estate</a><a href="free-quote.html">Free quote</a><a href="privacy-policy.html">Privacy policy</a><a href="terms-of-service.html">Terms of service</a></div>
+<p class="fine">© 2026 Shreem Financial Group. All rights reserved. <!-- TODO: licence / brokerage disclosures --></p></div></footer><script>const b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+document.querySelectorAll('form[data-mail]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();
+ const t=form.elements.topic;const to=(t&&t.value==='Real estate')?'veera.gudipalli@pontisrealty.com':form.dataset.mail;
+ const body=encodeURIComponent([...form.elements].filter(x=>x.name&&x.value).map(x=>x.name+': '+x.value).join('\n'));
+ const note=form.querySelector('.note');if(note){note.hidden=false;note.querySelector('b').textContent=to}
+ window.location.href='mailto:'+to+'?subject='+encodeURIComponent('Website enquiry')+'&body='+body;}));
+const $=id=>document.getElementById(id);
+function money(n){return n.toLocaleString('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0})}
+if($('price')){function calc(){
+ const price=+$('price').value||0,pct=+$('down').value||0,rate=+$('rate').value||0,yrs=+$('amort').value||25;
+ const down=price*pct/100,loan=Math.max(price-down,0),n=yrs*12;const i=Math.pow(1+rate/200,1/6)-1;
+ const pay=i===0?loan/n:loan*i/(1-Math.pow(1+i,-n));
+ $('pay').textContent=money(isFinite(pay)?pay:0);$('o-loan').textContent=money(loan);$('o-down').textContent=money(down);$('o-int').textContent=money(Math.max(pay*n-loan,0));}
+['price','down','rate','amort'].forEach(id=>$(id).addEventListener('input',calc));calc();}
+if($('s-start')){function sv(){
+ const p=+$('s-start').value||0,c=+$('s-month').value||0,y=+$('s-years').value||0,r=(+$('s-rate').value||0)/100/12,n=y*12;
+ const fv=r===0?p+c*n:p*Math.pow(1+r,n)+c*((Math.pow(1+r,n)-1)/r);const put=p+c*n;
+ $('s-fv').textContent=money(fv);$('s-put').textContent=money(put);$('s-gain').textContent=money(Math.max(fv-put,0));}
+['s-start','s-month','s-years','s-rate'].forEach(id=>$(id).addEventListener('input',sv));sv();}</script></body></html>
